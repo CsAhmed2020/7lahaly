@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/small_padding"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/parent"
+        app:boxBackgroundColor="@color/white"
+        android:padding="@dimen/small_padding"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="@dimen/signup_text_margin_top"
+        app:boxStrokeWidth="@dimen/stroke_width"
+        app:boxStrokeColor="@color/black">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword|numberPassword"
+            android:maxLines="1"
+            android:hint="@string/old_password"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/parent"
+        app:boxBackgroundColor="@color/white"
+        android:padding="@dimen/small_padding"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="@dimen/signup_text_margin_top"
+        app:boxStrokeWidth="@dimen/stroke_width"
+        app:boxStrokeColor="@color/black"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/background_color">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword|numberPassword"
+            android:maxLines="1"
+            android:hint="@string/new_password"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/parent"
+        app:boxBackgroundColor="@color/white"
+        android:padding="@dimen/small_padding"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="@dimen/signup_text_margin_top"
+        app:boxStrokeWidth="@dimen/stroke_width"
+        app:boxStrokeColor="@color/black"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/background_color">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword|numberPassword"
+            android:maxLines="1"
+            android:hint="@string/confirm_password"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_from_top"
+        android:id="@+id/change_pass_btn"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_color"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:text="@string/change_password" />
+    </RelativeLayout>
+
+</LinearLayout>

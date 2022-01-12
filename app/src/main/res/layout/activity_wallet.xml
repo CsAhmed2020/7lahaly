@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".WalletActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guidelineA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".05"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guidelineB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".25"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wallet_tv_layout"
+        android:background="@drawable/wallet_balance_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineB"
+        app:layout_constraintTop_toBottomOf="@id/guidelineA"
+        android:padding="@dimen/small_padding"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wallet_value"
+            android:id="@+id/wallet_value"
+            android:textSize="@dimen/big_txt_size"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/egy"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineB"
+        app:layout_constraintTop_toBottomOf="@id/wallet_tv_layout"
+        android:padding="@dimen/small_padding"
+        android:layout_marginTop="@dimen/padding_grid_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet"
+            android:textSize="@dimen/big_txt_size"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/available_amount_tv"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CardViewStyle"
+        android:id="@+id/cardview_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/mid_margin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1.00"
+        app:cardElevation="@dimen/mid_margin">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result_titleA"
+                    android:padding="@dimen/small_padding"
+                    android:layout_margin="@dimen/small_margin_top"
+                    android:textSize="@dimen/mid_txt_size"
+                    android:text="@string/amount_of_recharge"
+                    android:textColor="@color/second_txt_color"
+
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/parent"
+                    app:boxBackgroundColor="@color/white"
+                    android:padding="@dimen/small_padding"
+                    android:textColorHint="@color/black"
+                    android:layout_marginTop="@dimen/signup_text_margin_top"
+                    app:boxStrokeWidth="@dimen/stroke_width"
+                    app:boxStrokeColor="@color/black">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:hint="@string/wallet_val_edt"
+                        android:textColor="@color/black"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dawnload_pdf_btn">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_shape"
+                        android:text="@string/upload_receipt_of_pay"
+                        android:textSize="@dimen/mid_txt_size"
+                        android:layout_margin="@dimen/small_margin_top"
+                        android:textAllCaps="false"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/assignment_card_shape"
+                    android:weightSum="4"
+                    android:layout_margin="@dimen/small_margin_top">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/grid_margin_top"
+                        android:layout_weight="1"
+                        android:src="@drawable/vodafone_cashe"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/vod_num"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/big_txt_size"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/small_margin_top"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_margin_top"
+                    android:background="@drawable/assignment_card_shape"
+                    android:weightSum="4">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/grid_margin_top"
+                        android:layout_weight="1"
+                        android:src="@drawable/etisalat_cash"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/ets_num"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/big_txt_size"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/small_margin_top"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidelineA"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wallet_arrow_back"
+            android:layout_marginStart="@dimen/small_padding"
+            android:background="@color/background_color"
+            android:gravity="center"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mid_txt_size"
+            app:drawableStartCompat="@drawable/ic_arrow_left" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

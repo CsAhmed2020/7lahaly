@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:layout_marginEnd="@dimen/small_padding"
+    android:layout_marginStart="@dimen/small_padding"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            app:boxBackgroundColor="@color/white"
+            android:padding="@dimen/small_padding"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/signup_text_margin_top"
+            app:boxStrokeWidth="@dimen/stroke_width"
+            app:boxStrokeColor="@color/black">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone|textEmailAddress"
+                android:maxLines="1"
+                android:hint="@string/mobile_or_email"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            style="@style/parent"
+            android:id="@+id/password_layout"
+            android:layout_marginTop="@dimen/signup_text_margin_top"
+            app:boxBackgroundColor="@color/white"
+            android:textColorHint="@color/black"
+            android:padding="@dimen/small_padding"
+            app:boxStrokeWidth="@dimen/stroke_width"
+            app:boxStrokeColor="@color/black"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/background_color"
+            app:passwordToggleTintMode="multiply">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:maxLines="1"
+                android:inputType="textPassword|numberPassword"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_from_top"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/background_color"
+                android:id="@+id/sign_in_btn"
+                android:gravity="center"
+                android:paddingStart="30dp"
+                android:text="@string/sign_in"
+                app:icon="@drawable/ic_arrow"
+                app:iconGravity="end" />
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forget_password_txt"
+            android:layout_marginTop="@dimen/signup_text_margin_top"
+            android:text="@string/forget_password"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:textSize="15sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_account_txt"
+            android:layout_marginTop="@dimen/margin_from_top"
+            android:text="@string/create_account"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

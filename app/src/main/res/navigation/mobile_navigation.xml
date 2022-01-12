@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.a7lahaly.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.a7lahaly.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_quiz"
+        android:name="com.example.a7lahaly.ui.quiz.QuizFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_quiz" />
+
+    <fragment
+        android:id="@+id/nav_assignment"
+        android:name="com.example.a7lahaly.ui.assignment.AssignmentFragment"
+        android:label="@string/menu_assignment"
+        tools:layout="@layout/fragment_assignment" />
+
+    <fragment
+       android:id="@+id/nav_support"
+        android:name="com.example.a7lahaly.ui.support.SupportFragment"
+        android:label="@string/support"
+        tools:layout="@layout/fragment_support"
+        />
+</navigation>

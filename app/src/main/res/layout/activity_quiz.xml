@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".QuizActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guidelineA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".05"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guidelineB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".20"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guidelineC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".95"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/QuizCardViewStyle"
+        android:id="@+id/cardview_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/quiz_card_margin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineB"
+        app:layout_constraintBottom_toTopOf="@id/guidelineC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:cardElevation="@dimen/mid_margin">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/small_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:padding="@dimen/small_padding"
+                    android:layout_margin="@dimen/small_margin_top"
+                    android:textSize="@dimen/mid_txt_size"
+                    android:text="@string/question_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radiogrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioButton1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:background="@drawable/assignment_card_shape"
+                            android:text="@string/stefanie_taylor"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/small_margin_top"
+                            android:layout_margin="@dimen/small_margin_top"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/assignment_card_shape"
+                            android:layoutDirection="rtl"
+                            android:text="@string/mithali_raj"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/small_margin_top"
+                            android:layout_margin="@dimen/small_margin_top"
+                            android:checked="true"
+                            android:shadowColor="@color/black"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layoutDirection="rtl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/assignment_card_shape"
+                            android:text="@string/suzia_betez"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/small_margin_top"
+                            android:layout_margin="@dimen/small_margin_top"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radioButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/assignment_card_shape"
+                            android:layoutDirection="rtl"
+                            android:text="@string/harmanpreet_kaur"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/small_margin_top"
+                            android:layout_margin="@dimen/small_margin_top"
+                            />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidelineA"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quiz_arrow_back"
+            android:layout_marginStart="@dimen/small_padding"
+            android:background="@color/background_color"
+            android:gravity="center"
+            android:padding="@dimen/small_padding"
+            android:text="@string/play_quiz"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mid_txt_size"
+            app:drawableStartCompat="@drawable/ic_arrow_left" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidelineB"
+        android:id="@+id/info_layout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidelineB"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/small_padding"
+            android:text="@string/question"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mid_txt_size"
+            android:textStyle="bold"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/small_padding"
+            android:text="@string/question_num"
+            android:id="@+id/ques_num"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/small_padding"
+            android:text="/ 10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_item_width"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/small_padding"
+                android:id="@+id/users_count"
+                android:text="@string/users_counter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_txt_size"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_user_group_296"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_padding"
+        android:src="@drawable/dotted"
+        android:layout_marginEnd="@dimen/small_margin_top"
+        android:layout_marginStart="@dimen/small_margin_top"
+        android:layerType="software"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_layout"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:id="@+id/result_btn"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/guidelineA"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/small_padding"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

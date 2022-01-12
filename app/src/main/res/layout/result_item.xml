@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="4"
+    android:layout_margin="@dimen/small_margin_top"
+    tools:showIn="@layout/activity_result">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/subject"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_txt_size"
+        android:padding="@dimen/small_padding"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:layout_weight="1"
+        android:text="@string/full_grade"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_txt_size"
+        android:background="@color/result_backA"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="@dimen/small_padding"
+        android:layout_weight="1"
+        android:text="@string/grade"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_txt_size"
+        android:textStyle="bold"
+        android:background="@color/result_backB"
+        />
+
+</LinearLayout>
